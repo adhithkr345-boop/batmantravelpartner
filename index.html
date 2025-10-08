@@ -325,27 +325,46 @@
           <a href="#contact" style="background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04);">Request a Callback</a>
         </div>
 
-  <div style="margin-top:16px">
-          <h4 style="margin:0 0 8px">Quick Inquiry</h4>
-          <form id="contact" action="https://formspree.io/f/mgvnlzrb" method="POST">
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <input required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
-              <input required placeholder="Phone or WhatsApp" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
-              <select style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
-                <option>Select package</option>
-                <option>Munnar Vattavada</option>
-                <option>Kodaikanal</option>
-                <option>Alappuzha</option>
-                <option>Ramakkalmedu</option> 
-                <option>Nelliampathy</option>
-                <option>Athirapally</option>
-                <option>Vagamon</option>
-                <option>Ooty</option>
-              </select>
-              <button type="submit" class="btn primary">Send Inquiry</button>
-            </div>
-          </form>
-        </div>
+ <div style="margin-top:16px">
+  <h4 style="margin:0 0 8px">Quick Inquiry</h4>
+  <form id="contact" action="https://formspree.io/f/mgvnlzrb" method="POST">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      
+      <!-- Name -->
+      <input type="text" name="name" required 
+             placeholder="Your name" 
+             style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+
+      <!-- Email (Formspree-ന് കുറഞ്ഞത് 1 email field വേണം) -->
+      <input type="email" name="email" required 
+             placeholder="Your email" 
+             style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+
+      <!-- Phone -->
+      <input type="tel" name="phone" required 
+             placeholder="Phone or WhatsApp" 
+             style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+
+      <!-- Package -->
+      <select name="package" required 
+              style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+        <option value="">Select package</option>
+        <option>Munnar Vattavada</option>
+        <option>Kodaikanal</option>
+        <option>Alappuzha</option>
+        <option>Ramakkalmedu</option> 
+        <option>Nelliampathy</option>
+        <option>Athirapally</option>
+        <option>Vagamon</option>
+        <option>Ooty</option>
+      </select>
+
+      <!-- Submit -->
+      <button type="submit" class="btn primary">Send Inquiry</button>
+    </div>
+  </form>
+</div>
+
 
         <div style="margin-top:18px;color:var(--muted);font-size:0.9rem">
           <strong>Open hours</strong>
